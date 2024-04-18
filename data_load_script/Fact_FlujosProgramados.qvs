@@ -1,0 +1,33 @@
+///$tab Fact_FlujosProgramados
+Flujos_Programados:
+LOAD
+    %KEY_BLOQUE_FUENTE_VERSION,
+    Linea,
+    barra_a,
+    barra_b,
+    flujo_pot,
+    units,
+    fuente,
+    intervalo,
+    fecha_version,
+    fecha_hora_version,
+    numero_version,
+    bloque,
+    etapa,
+    hidro,
+    hidro		AS HidroFiltro,
+    AñoMesNum,	
+    MesAño,
+	Mes,
+    Año,
+    Semana,
+    Dia,
+    Hora,
+    Fecha,
+    Fecha_Efectiva,
+    Fecha_Hora,
+    fecha_version		AS fecha_version_indhor,
+    numero_version		AS numero_version_indhor,
+    fuente				AS fuente_indhor
+FROM [lib://STG/PLATAFORMA_PROGRAMACION/STG_PRG_FLUJOS_NORMATIVO.qvd] (qvd)
+where fuente = 'PID';
